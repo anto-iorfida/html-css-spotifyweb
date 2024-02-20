@@ -59,9 +59,37 @@ small:hover,
     color: white;
 }
 
-.cart-playlist img:hover{
+.cart-playlist:hover img{
+    transition:opacity 0.3s ease;
     opacity: 0.2 ;
 }
+
+.cart-playlist::after{
+    content: "\f144";
+    font-family: 'Font Awesome 5 Free';
+    color: rgba(255, 255, 255, 0.701);
+    display: none;
+}
+.cart-playlist:hover::after{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    /* transform: translate(-50%, -50%); */
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    font-size: 50px;
+    animation: rotate-icon 0.5s  ;
+}
+@keyframes rotate-icon {
+    0% {
+      transform: rotate(0deg);
+      font-size: 10px;
+    }
+    100% {
+      transform: rotate(360deg);
+      font-size: 50px;
+    }
+  }
 
 .music-bar:hover .progress{
     background-color: green;
@@ -75,8 +103,29 @@ small:hover,
 .btn-upgrade:hover{
     transform: scale(1.20);
 }
+.btn-upgrade:hover{
+    animation: vibra 0.7s ease-in-out;
+}
+@keyframes vibra {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  } 
 
-
+  footer *{
+    animation: effetto-wow 1.5s;
+  }
+  @keyframes effetto-wow {
+    from{
+        font-size: 0;
+    }
+    to{
+        font-size: auto;
+    }
+   
+  }
 
 /**********************
         ASIDE
@@ -249,6 +298,7 @@ main{
 
 .cart-playlist{
     width: calc(100% / 6 - 18px);
+    position: relative;
 }
 
 .row{
@@ -270,7 +320,6 @@ main{
 .contenitor-playlist p{
     color: #7d7f84;
 }
-
 
 /**********************
          FOOTER
@@ -420,6 +469,9 @@ footer .fa-regular.fa-circle-play{
     }
     .col-left {
         width: 35%;
+    }
+    .col-right{
+        gap: 8px;
     }
     
 }

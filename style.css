@@ -1,0 +1,425 @@
+/**********************
+        RESET
+**********************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+img{
+    width: 100%;
+}
+/**********************
+        GENERAL
+**********************/
+.contenitor{
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.radius-50{
+    border-radius: 50%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+/**********************
+        HOVER
+**********************/
+p:hover,
+small:hover,
+ h1:hover,
+  h2:hover,
+   h3:hover,
+    h4:hover,
+     li:hover,
+      i:hover{
+    color: white;
+}
+
+.cart-playlist img:hover{
+    opacity: 0.2 ;
+}
+
+.music-bar:hover .progress{
+    background-color: green;
+}
+
+.col-right i:hover, 
+.col-center i:hover{
+    transform: scale(1.15); 
+}
+
+.btn-upgrade:hover{
+    transform: scale(1.20);
+}
+
+
+
+/**********************
+        ASIDE
+**********************/
+aside{
+    max-width: 230px;
+    height: calc(100vh - 90px);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: #5f5f5f;
+    font-size: 18px;
+    font-weight: bold;
+    overflow-y: auto;
+}
+
+.logo-aside img:last-child{
+    display: none;
+}
+
+.logo-aside{
+    max-height: 90px;
+    padding: 18px;
+}
+
+.logo-aside img{
+    width: 60%;
+}
+
+.body-aside{
+    flex-grow: 1;
+}
+
+.comand{
+    min-height: 120px;
+    padding: 0 20px;
+}
+
+.comand ul li {
+    padding: 4px 0;
+    gap: 10px;
+    position: relative;
+}
+
+.special, 
+.comand-playlist h3, 
+.footer-aside h4 {
+    color: white;
+}
+.comand .special::after{
+    content: '';
+    position: absolute;
+    left: -20px; 
+    width: 6px; 
+    height: 48px; 
+    background-color: green; 
+}
+
+.comand img,
+.footer-aside img{
+    height: 35px;
+    width: 35px;
+}
+
+.comand-playlist{
+    padding: 18px;
+}
+
+.comand-playlist  *{
+    margin-bottom: 14px;
+}
+
+.comand-playlist .flex{
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-plus{
+    padding: 0px 10px;
+    background-color: #a3a3a3;
+    border: 0px ;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.footer-aside{
+    min-height: 85px;
+    padding: 0 20px;
+}
+
+.footer-aside hr{
+    color: inherit;
+    margin: 4px;
+}
+
+.fa-solid.fa-arrow-down{
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 2px;
+    font-size: 16px;
+}
+
+.footer-aside img{
+    border-radius: 50%;
+    background-color: #a3a3a3;
+}
+
+.footer-aside > *:not(hr){
+    padding: 6px 0;
+}
+
+.footer-aside .flex{
+    gap: 10px;
+}
+
+/**********************
+         MAIN
+**********************/
+main{
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+.bar-upgrade{
+    min-height: 90px;
+    background-color: black;
+    justify-content: end;
+    padding: 0 20px;
+}
+
+.btn-upgrade{
+    background-color: transparent;
+    color: white;
+    padding: 8px 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.interface-principal{
+    background-color:#141922;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 20px;
+}
+
+.listening-mode {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5f5f5f;
+    padding: 30px 0;
+}
+
+.listening-mode ul{
+    gap: 40px;
+}
+
+.listening-mode ul li{
+    position: relative;
+}
+
+.bar-special::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - 25px); 
+    width: 50px; 
+    height: 4px; 
+    background-color: green; 
+}
+
+.cart-playlist{
+    width: calc(100% / 6 - 18px);
+}
+
+.row{
+    gap: 21px;
+    margin-top: 20px;
+}
+
+.contenitor-playlist h1{
+    color: white;
+    padding: 20px 0 ;
+}
+
+.cart-playlist h2{
+    font-size: clamp(14px, 4vw, 20px);
+    color: white;
+    padding: 10px 0;
+}
+
+.contenitor-playlist p{
+    color: #7d7f84;
+}
+
+
+/**********************
+         FOOTER
+**********************/
+footer{
+    background-color:#282828 ;
+    height: 90px;
+    z-index: 6;
+    position: sticky;
+    padding: 0 14px;
+    color: white;
+}
+
+footer > div {
+    height: 100%;
+}
+
+.col-left{
+    /* max-width: 230px; */
+    /* flex-grow: 1; */
+    width: 15%;
+    gap: 10px;
+    color: #5f5f5f;
+}
+
+.col-left img{
+    height:50% ;
+    width: auto;
+}
+
+.col-left i{
+    margin: 0 6px;
+}
+
+.col-center{
+    /* flex-grow: 6; */
+    width: 70%;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.icons-music > *{
+    margin: 0 22px;
+    font-size: 22px;
+    color: white;
+    align-content: center;
+}
+
+
+footer .fa-regular.fa-circle-play{
+    font-size: 34px;
+    margin: 0 16px;
+}
+
+
+.music-bar {
+    width: 50%; 
+    height: 6px; 
+    background-color: #5a5a5a; 
+    border-radius: 10px; 
+    position: relative;
+    margin: 0 20px;
+  }
+  
+  .progress {
+    width: 25%; 
+    height: 100%; 
+    background-color: white;
+  }
+  
+
+.col-right{
+    /* min-width: 230px; */
+    /* flex-grow: 1; */
+    width: 15%;
+    gap: 18px;
+    justify-content: end;
+}
+
+.col-right .music-bar{
+    margin: 0;
+}
+
+/**********************
+        RESPONSIVE
+**********************/
+@media screen and (max-width:1100px){
+    /* -----MAIN----- */
+    .cart-playlist{
+        width: calc(100% / 4 - 18px);
+    }
+    /* ----/MAIN----- */
+    /* ----FOOTER----- */
+    .col-left{
+        width: 20%;
+    }
+    .col-center{
+        width: 55%;
+    }
+    .col-right{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:700px){
+    /* -----MAIN----- */
+    .cart-playlist{
+        width: calc(100% / 2 - 18px);
+    }
+    .icons-music > *{
+        margin: 0 10px;
+    }
+    /* ----FOOTER----- */
+    .col-center{
+        width: 50%;
+    }
+    .col-left{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:600px){
+    /*-----ASIDE-----*/
+    aside{
+        max-width: 90px;
+    }
+    aside * {
+        margin: 0 auto;
+    }
+    .logo-aside img:last-child{
+        display: block;
+        max-width: 90%;
+    }
+    .logo-aside > img {
+        display: none;
+    }
+
+    aside p ,
+    aside h4, 
+    aside .comand-playlist {
+        display: none;
+    }
+    /*----/ASIDE-----*/
+    /* ---FOOTER---- */
+    .col-center {
+        width: 45%;
+    }
+    .col-left {
+        width: 35%;
+    }
+    
+}

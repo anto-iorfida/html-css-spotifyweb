@@ -102,6 +102,7 @@ small:hover,
 
 .btn-upgrade:hover{
     transform: scale(1.20);
+    transition:opacity 0.5s ease;
 }
 .btn-upgrade:hover{
     animation: vibra 0.7s ease-in-out;
@@ -115,7 +116,7 @@ small:hover,
   } 
 
   footer *{
-    animation: effetto-wow 1.5s;
+    animation: effetto-wow 2s;
   }
   @keyframes effetto-wow {
     from{
@@ -124,7 +125,18 @@ small:hover,
     to{
         font-size: auto;
     }
-   
+  }
+
+  aside *{
+    animation: effetto-wow 2s;
+  }
+  @keyframes effetto-wow {
+    from{
+        font-size: 0;
+    }
+    to{
+        font-size: auto;
+    }
   }
 
 /**********************

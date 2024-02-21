@@ -64,33 +64,6 @@ small:hover,
     opacity: 0.2 ;
 }
 
-.cart-playlist::after{
-    content: "\f144";
-    font-family: 'Font Awesome 5 Free';
-    color: rgba(255, 255, 255, 0.701);
-    display: none;
-}
-.cart-playlist:hover::after{
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    /* transform: translate(-50%, -50%); */
-    display: inline-block;
-    transition: opacity 0.3s ease;
-    font-size: 50px;
-    animation: rotate-icon 0.5s  ;
-}
-@keyframes rotate-icon {
-    0% {
-      transform: rotate(0deg);
-      font-size: 10px;
-    }
-    100% {
-      transform: rotate(360deg);
-      font-size: 50px;
-    }
-  }
-
 .music-bar:hover .progress{
     background-color: green;
 }
@@ -107,10 +80,56 @@ small:hover,
     transform: scale(1.20);
     transition:opacity 0.5s ease;
 }
-.btn-upgrade:hover{
-    animation: vibra 0.7s ease-in-out;
+
+/* animation line bottom cont-img -----------*/
+.cont-img::before{
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-top: 2px solid green; 
+  transition: width 3.5s ease-in-out ; 
+}
+.cont-img:hover::before {
+     width: 100%; 
+  }
+/* animation cart-playlist , play and rotate */
+.cart-playlist .cont-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+  }
+
+.cart-playlist .cont-img::after{
+    content: "\f144";
+    font-family: 'Font Awesome 5 Free';
+    color: rgba(255, 255, 255, 0.701);
+    display: none;
 }
 
+.cart-playlist:hover .cont-img::after{
+    position: absolute;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    font-size: 50px;
+    animation: rotate-icon 0.5s  ;
+}
+
+@keyframes rotate-icon {
+    0% {
+      transform: rotate(0deg);
+      font-size: 10px;
+    }
+    100% {
+      transform: rotate(360deg);
+      font-size: 50px;
+    }
+  }
+/* animation line grows--------------------- */
 .listening-mode li::after{
     content: "";
     position: absolute;
@@ -121,13 +140,16 @@ small:hover,
     background-color: green;
     transition: width 0.75s ease-in-out, left 0.75s ease-in-out;
 }
-
 .listening-mode li:hover::after {
     width: calc(100% - 20px);
     left: 10px;
     transition: width 1.5s ease-in-out, left 1.5s ease-in-out;
   }
-
+  
+  /* animation button----------------------  */
+.btn-upgrade:hover{
+    animation: vibra 0.7s ease-in-out;
+}
 @keyframes vibra {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -135,7 +157,7 @@ small:hover,
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
   } 
-
+/* animation font fro 0 to auro -------------*/
   footer *{
     animation: effetto-wow 2s;
   }
@@ -147,7 +169,7 @@ small:hover,
         font-size: auto;
     }
   }
-
+/* animation font fro 0 to auro--------------- */
   aside *{
     animation: effetto-wow 2s;
   }
@@ -181,7 +203,12 @@ aside{
 
 .logo-aside{
     max-height: 90px;
+    z-index: 3;
+    background-color: black;
     padding: 18px;
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 
 .logo-aside img{
@@ -225,6 +252,7 @@ aside{
 
 .comand-playlist{
     padding: 18px;
+    overflow-y: auto;
 }
 
 .comand-playlist  *{
